@@ -1,0 +1,118 @@
+body {
+	font-family:helvetica;
+	background:url(img/texture-gray.jpg);
+	padding:52px 0px 0px 0px;
+}
+
+#wrapper {
+	width:1000px;
+	margin:10px auto 0px auto;
+}
+
+nav.affix {
+	margin-top:0px;
+	position:fixed;
+	top:0px;
+	width:100%;
+}
+
+nav .navbar-inner {
+	border-radius:0px;
+}
+
+nav .navbar-inner .container {
+	width:1000px;
+	margin:0px auto;
+}
+
+nav {
+	margin-top:-72px;
+	z-index:1000;
+}
+
+nav a.brand {
+	font-family:offside;
+}
+
+nav a.pull-right {
+	margin-top:6px;
+}
+
+nav a.pull-right img {
+	height:26px;
+}
+
+header h1 {
+	font-size:40pt;
+}
+
+pre {
+	border:none;
+	background-color:inherit;
+}
+
+div.output-wrapper.rendered {
+	background-color:#efefef;
+}
+
+div.output-wrapper {
+	margin-top:10px;
+	border:2px solid #fff;
+	overflow:auto;
+}
+
+div.output-wrapper.raw {
+	background-color:#000;
+	color:#fff;
+}
+
+div.output-label {
+	float:right;
+	background:#fff;
+	color:#000;
+	padding:4px;
+	text-transform:uppercase;
+	font-family:courier;
+	font-weight:bold;
+	font-size:12pt;
+	border:1px solid #aaa;
+	margin:0px 0px 6px 6px;
+}
+
+div.raw pre {
+	color:#fff;
+	background-color:#000;
+	padding:10px;
+}
+
+footer {
+	text-align:center;
+	font-size:10pt;
+}
+
+/* RESPONSIVE DESIGN */
+
+.desktop-only, .phone-only {
+	display:none;
+}
+
+@media(min-width:481px) {
+	.desktop-only {
+		display:inherit;
+	}
+}
+
+@media(max-width:480px) {
+	.desktop-only {
+		display:none;
+	}
+
+	.phone-only {
+		display:inherit;
+	}
+
+	#wrapper {
+		width:98%;
+		padding:0px 4px;
+	}
+}
