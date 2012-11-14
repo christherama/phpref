@@ -1,0 +1,18 @@
+// Display the form
+echo '
+<form action="./?ref=forms" method="post">
+	<input type="text" name="first_name" placeholder="First Name" />
+	<input type="text" name="last_name" placeholder="Last Name" />
+	<input type="password" name="password" placeholder="password" />
+	<input type="submit" value="Submit"/>
+</form>';
+echo "\n";
+
+// If form data was submitted, process it. Otherwise, display a message
+if(count($_POST) > 0) {
+	// Display posted data
+	echo '$_POST: ';
+	print_r($_POST);
+} else {
+	echo '<p class="alert">Enter information into the form and click <em>Submit</em>.</p>';
+}

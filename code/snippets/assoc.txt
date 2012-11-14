@@ -7,6 +7,7 @@ $cabinet = array(
 );
 
 // Display the entire array
+echo '$cabinet: ';
 print_r($cabinet);
 
 // Iterate over the array, displaying as a table

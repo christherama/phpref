@@ -2,6 +2,7 @@
 $names = array('Samantha','Charlie','Susie');
 
 // Display entire array
+echo '$names: ';
 print_r($names);
 echo '<br/>';
 
@@ -13,6 +14,7 @@ echo '<br/>';
 $names[0] = 'Cookie Monster';
 
 // Verify change by displaying entire array
+echo '$names: ';
 print_r($names);
 
 // Display all names in an unordered list
