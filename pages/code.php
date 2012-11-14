@@ -1,3 +1,5 @@
+<div class="output-wrapper rendered">
+	<div class="output-label">php code</div>
 <?php
 require_once('geshi/geshi.php');
 
@@ -12,7 +14,7 @@ if(file_exists($file)) {
 	$geshi = new GeSHi("<?php\n".$source."\n?>", $lang);
 	
 	$geshi->set_header_type(GESHI_HEADER_DIV);
-	$style = 'border:1px solid #bbb;background-color:#ececec;font-family:courier;padding:10px;';
+	$style = 'font-family:courier;padding:10px;';
 	$geshi->set_overall_style($style);
 	
 	//$geshi->enable_line_numbers(GESHI_FANCY_LINE_NUMBERS,2);
@@ -35,7 +37,7 @@ if(file_exists($file)) {
 	$geshi->set_overall_style($style);
 	$raw_output = htmlentities($output);
 	?>
-
+</div>
 <div class="output-wrapper raw">
 	<div class="output-label">raw output</div>
 	<pre class="output"><?php echo $raw_output;?></pre>
