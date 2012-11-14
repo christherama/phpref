@@ -13,7 +13,7 @@
 		<title>PHP Reference</title>
 	</head>
 	<body>
-		<nav id="navbar" class="navbar navbar-static affix-top"  data-spy="affix" data-offset-top="0">
+		<nav>
 			<?php include('layout/nav.php');?>
 		</nav>
 		<div id="wrapper">

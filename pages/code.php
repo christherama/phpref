@@ -9,11 +9,10 @@ if(file_exists($file)) {
 
 	$lang = 'php';
 	
-	$geshi = new GeSHi("<?php\n\n".$source."\n\n?>", $lang);
+	$geshi = new GeSHi("<?php\n".$source."\n?>", $lang);
 	
 	$geshi->set_header_type(GESHI_HEADER_DIV);
 	$style = 'border:1px solid #bbb;background-color:#ececec;font-family:courier;padding:10px;';
-	$style .= "font-size:12pt;";
 	$geshi->set_overall_style($style);
 	
 	//$geshi->enable_line_numbers(GESHI_FANCY_LINE_NUMBERS,2);
@@ -33,7 +32,6 @@ if(file_exists($file)) {
 	$geshi->set_language('html4strict');
 	$geshi->set_source($output);
 	$style = 'font-family:courier;padding:10px;';
-	$style .= "font-size:12pt;";
 	$geshi->set_overall_style($style);
 	$raw_output = htmlentities($output);
 	?>

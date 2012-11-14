@@ -1,7 +1,7 @@
 body {
 	font-family:helvetica;
 	background:url(img/texture-gray.jpg);
-	padding:52px 0px 0px 0px;
+	padding:110px 0px 0px 0px;
 }
 
 #wrapper {
@@ -9,7 +9,7 @@ body {
 	margin:10px auto 0px auto;
 }
 
-nav.affix {
+.affix {
 	margin-top:0px;
 	position:fixed;
 	top:0px;
@@ -90,6 +90,19 @@ footer {
 	font-size:10pt;
 }
 
+table th {
+	text-align:left;
+	padding:2px 6px 2px 2px;
+}
+
+table td {
+	padding:2px 6px 2px 2px;
+}
+
+table th, table td {
+	border:1px solid #555;
+}
+
 /* RESPONSIVE DESIGN */
 
 .desktop-only, .phone-only {
@@ -102,7 +115,7 @@ footer {
 	}
 }
 
-@media(max-width:480px) {
+@media(max-width:980px) {
 	.desktop-only {
 		display:none;
 	}
@@ -115,4 +128,20 @@ footer {
 		width:98%;
 		padding:0px 4px;
 	}
+
+	#wrapper * {
+		font-size:130%;
+		line-height:130%;
+	}
+}
+
+#nav-phone {
+	height:200px;
+}
+
+#nav-phone a.btn {
+	display:block;
+	margin:0px 0px;
+	font-size:40pt;
+	padding:20px 0px;
 }
