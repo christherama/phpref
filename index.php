@@ -1,6 +1,14 @@
+<?php
+// Generate a random favicon color. Why? Because we can
+$hex = '0123456789abcdef';
+$colors = array($hex[rand(0,15)],$hex[rand(0,15)],$hex[rand(0,15)],$hex[rand(0,15)],$hex[rand(0,15)],$hex[rand(0,15)]);
+$rgb = implode('',$colors);
+?>
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="icon" type="image/png" href="http://placehold.it/32x32/<?php echo $rgb ?>/000000.png&amp;text=PHP" />
+
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Offside" />
 		
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
