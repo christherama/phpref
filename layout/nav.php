@@ -1,9 +1,11 @@
 <?php
+// Get today's date (for the query string nav URL)
 $dayName = date('D');
 $month = date('M');
 $dayNum = date('j');
 $year = date('Y');
 
+// Nav menu items
 $nav = array(
 	'Basics' => array(
 		'Variables' => 'variables',
@@ -29,20 +31,26 @@ $nav = array(
 <div id="navbar" class="navbar navbar-static affix-top"  data-spy="affix" data-offset-top="0">
 	<div class="navbar-inner">
 		<div class="container">
-			<a href="./" class="brand">PHP Reference</a>
+			<a href="<?php echo $ROOT; ?>" class="brand">PHP Reference</a>
 			<ul class="nav" role="navigation">
 			<?php foreach($nav as $cat => $pages): ?><li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $cat ?></a>
 					<ul class="dropdown-menu">
-					<?php foreach($pages as $name => $id): ?>
-						<li><a href="./?ref=<?php echo $id ?>"><?php echo $name ?></a></li>
+					<?php foreach($pages as $name => $id): 
+						// Construct standard or nice URLs
+						if($URL_REWRITING) { // variable set in index.php
+							$url = "$ROOT/code/$id";
+						} else {
+							$url = "$ROOT/?p=code&ref=$id";
+						}
+						?>
+						<li><a href="<?php echo $url ?>"><?php echo $name ?></a></li>
 					<?php endforeach ?>
 					</ul>
 				</li>
 			<?php endforeach ?>
 			</ul>
-			<!--<a class="pull-right" href="http://www.php.net/manual/en/" target="_blank"><img src="img/php-icon.png" alt="PHP logo" /></a>-->
 		</div>
 	</div>
 </div>

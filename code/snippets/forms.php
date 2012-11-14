@@ -1,3 +1,4 @@
+<?php
 // Display the form
 echo '
 <form action="./?ref=forms" method="post">
@@ -32,3 +33,4 @@ if(count($_POST) > 0) {
 } else {
 	echo '<p class="alert">Enter information into the form and click <em>Submit</em>.</p>';
 }
+?>

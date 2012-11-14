@@ -1,3 +1,4 @@
+<?php
 // Read 'sample.csv' file into an array of lines
 $lines = file('data/sample.csv',FILE_IGNORE_NEW_LINES);
 
@@ -21,3 +22,4 @@ foreach($lines as $line) {
 	echo "<h4>$name</h4>";
 	echo "<a href=\"mailto:$email\">$email</a>";
 }
+?>

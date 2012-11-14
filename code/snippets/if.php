@@ -1,3 +1,4 @@
+<?php
 // Set a value for $x
 $x = 12;
 
@@ -9,3 +10,4 @@ if($x < 20) {
 
 // Do something after the if-block
 echo "And we're done!";
+?>

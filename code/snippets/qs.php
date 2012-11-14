@@ -1,3 +1,4 @@
+<?php
 // The query string is stored into the super global array
 // called $_GET
 
@@ -14,3 +15,5 @@ print_r($_GET);
 echo 'Today is '.$_GET['day'].'<br/>';
 
 // Display the value of the month parameter
+echo "It's {$_GET['month']}!";
+?>

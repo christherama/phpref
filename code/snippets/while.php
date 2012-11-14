@@ -1,3 +1,4 @@
+<?php
 /* 
  * COUNT DOWN TO THE NUMBER SPECIFIED IN THE QUERY STRING
  */
@@ -16,3 +17,4 @@ while($w >= 0) {
 	$w--; // change the value of $w
 }
 echo '<h3>BOOM!</h3>';
+?>

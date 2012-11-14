@@ -1,3 +1,4 @@
+<?php
 // A simple loop displaying an unordered list of
 // the first ten numbers
 echo '<ul>';
@@ -18,3 +19,4 @@ for($a = 1; $a <= 10; $a++) {
 	echo '</tr>';
 }
 echo '</table>';
+?>

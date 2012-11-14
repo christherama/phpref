@@ -1,3 +1,4 @@
+<?php
 // Make an array
 $names = array('Samantha','Charlie','Susie');
 
@@ -23,3 +24,4 @@ foreach($names as $n) {
 	echo "<li>$n</li>";
 }
 echo '</ul>';
+?>

@@ -4,10 +4,12 @@
 require_once('geshi/geshi.php');
 
 $ref = isset($_GET['ref']) ? $_GET['ref'] : '';
-$file = "code/snippets/$ref.txt";
-
-if(file_exists($file)) {
-	$source = file_get_contents("code/snippets/$ref.txt");
+$path = "{$_SERVER['DOCUMENT_ROOT']}/phpref/code/snippets/$ref.php";
+if(file_exists($path)) {
+	$file = fopen($path,'r');
+	$source = fread($file,filesize($path));
+	$source = preg_replace("(\\n?<\?php\\n?)",'',$source);
+	$source = preg_replace("(\\n?\?>\\n?)",'',$source);
 
 	$lang = 'php';
 	

@@ -1,3 +1,4 @@
+<?php
 /* 
  * DISPLAY WHETHER WE'RE IN THE FIRST OR LAST HALF OF THE MONTH
  */
@@ -12,3 +13,4 @@ if($day_num < 15) {  // first half
 } else { // 15th of the month
 	echo "Is the month halfway <em>complete</em>, or halfway <em>incomplete</em>...?";
 }
+?>

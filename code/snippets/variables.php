@@ -1,3 +1,4 @@
+<?php
 // Initialize a variable
 $x = 10;
 
@@ -14,3 +15,4 @@ $x = $x - 27;
 
 // Variables inside of *double* quotes are evaluated
 echo "The value of x is $x";
+?>

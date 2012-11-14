@@ -1,3 +1,4 @@
+<?php
 // Make an associative array of cabinet members
 $cabinet = array(
 	'vice president'        => 'Joe Biden',
@@ -16,3 +17,4 @@ foreach($cabinet as $position => $name) {
 	echo "<tr><th>$position</th><td>$name</td></tr>";
 }
 echo '</table>';
+?>

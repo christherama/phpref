@@ -87,9 +87,23 @@ div.raw pre {
 	padding:10px;
 }
 
+.hero-unit p {
+	font-size:15pt;
+}
+
+.hero-unit ul, .hero-unit code {
+	font-size:12pt;
+}
+
+.hero-unit ul li {
+	margin:0px 0px 6px 0px;
+}
+
 footer {
+	margin:10px 0px 0px 0px;
 	text-align:center;
 	font-size:10pt;
+	color:#fff;
 }
 
 table th {
