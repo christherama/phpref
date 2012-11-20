@@ -1,12 +1,12 @@
 body {
 	font-family:helvetica;
 	background:url(img/texture-gray.jpg);
-	padding:110px 0px 0px 0px;
+	padding:110px 10px 0px 10px;
 }
 
-#wrapper {
-	width:1000px;
-	margin:10px auto 0px auto;
+.container-fluid {
+	max-width:960px;
+	margin:10px auto 0px auto;*/
 }
 
 .affix {
@@ -14,6 +14,10 @@ body {
 	position:fixed;
 	top:0px;
 	width:100%;
+}
+
+#navbar {
+	margin-left:-10px;
 }
 
 nav .navbar-inner {

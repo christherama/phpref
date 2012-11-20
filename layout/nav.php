@@ -16,7 +16,8 @@ $nav = array(
 	'Decision Structures' => array(
 		'if statements' => 'if',
 		'if-else statements' => 'else',
-		'if-elseif-else statements' => 'elseif'
+		'if-elseif-else statements' => 'elseif',
+		'switch statements' => 'switch'
 	),
 	'Repetition' => array(
 		'for loops' => 'for',
@@ -30,27 +31,34 @@ $nav = array(
 ?>
 <div id="navbar" class="navbar navbar-static affix-top"  data-spy="affix" data-offset-top="0">
 	<div class="navbar-inner">
-		<div class="container">
+		<div class="container-fluid">
 			<a href="<?php echo $ROOT; ?>" class="brand">PHP Reference</a>
-			<ul class="nav" role="navigation">
-			<?php foreach($nav as $cat => $pages): ?><li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $cat ?></a>
-					<ul class="dropdown-menu">
-					<?php foreach($pages as $name => $id): 
-						// Construct standard or nice URLs
-						if($URL_REWRITING) { // variable set in index.php
-							$url = "$ROOT/code/$id";
-						} else {
-							$url = "$ROOT/?p=code&ref=$id";
-						}
-						?>
-						<li><a href="<?php echo $url ?>"><?php echo $name ?></a></li>
-					<?php endforeach ?>
-					</ul>
-				</li>
-			<?php endforeach ?>
-			</ul>
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<div class="nav-collapse collapse">
+				<ul class="nav" role="navigation">
+				<?php foreach($nav as $cat => $pages): ?><li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $cat ?></a>
+						<ul class="dropdown-menu">
+						<?php foreach($pages as $name => $id): 
+							// Construct standard or nice URLs
+							if($URL_REWRITING) { // variable set in index.php
+								$url = "$ROOT/code/$id";
+							} else {
+								$url = "$ROOT/?p=code&ref=$id";
+							}
+							?>
+							<li><a href="<?php echo $url ?>"><?php echo $name ?></a></li>
+						<?php endforeach ?>
+						</ul>
+					</li>
+				<?php endforeach ?>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>

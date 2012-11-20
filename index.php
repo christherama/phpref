@@ -5,7 +5,7 @@ $colors = array($hex[rand(0,15)],$hex[rand(0,15)],$hex[rand(0,15)],$hex[rand(0,1
 $rgb = implode('',$colors);
 
 // Get directory of current request, to facilitate URL rewriting (i.e. nice URLs)
-$ROOT = '//'.$_SERVER['SERVER_NAME'].'/phpref';
+$ROOT = '//'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].'/phpref';
 
 // Change to true for nice URLs (also need to remove # at beginning of lines in .htaccess file)
 $URL_REWRITING = false;
@@ -13,6 +13,8 @@ $URL_REWRITING = false;
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 		<link rel="icon" type="image/png" href="//placehold.it/32x32/<?php echo $rgb ?>/000000.png&amp;text=PHP" />
 
 		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Offside" />
@@ -30,7 +32,7 @@ $URL_REWRITING = false;
 		<nav>
 			<?php include('layout/nav.php');?>
 		</nav>
-		<div id="wrapper">
+		<div id="wrapper" class="container-fluid">
 			<div id="content">
 				<?php include('layout/content.php');?>
 			</div>
