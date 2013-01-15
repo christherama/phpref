@@ -1,5 +1,5 @@
 <?php 
-$year = 2011;
+$year = 2012;
 $currYear = date('y');
 if($currYear > 11) {
 	$year .= '-'.$currYear;
